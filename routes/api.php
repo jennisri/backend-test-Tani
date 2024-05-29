@@ -20,8 +20,4 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('/tani', [TaniController::class, 'index']);
-Route::post('/tani', [TaniController::class, 'store']);
-Route::put('/tani', [TaniController::class, 'store']);
-
 Route::apiResource('/tani', TaniController::class)->only('index', 'store', 'update');
